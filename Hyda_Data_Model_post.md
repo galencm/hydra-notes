@@ -79,7 +79,7 @@ Hydra Data Model Post 0.1
 
 ## Examples:
 
-Potential ZPL post with multipart content, tag/pair and scoped tag/pair
+* Potential ZPL post with multipart content, tag/pair and scoped tag/pair
     ```
     post
         ident = "DCCCECB20793342E3BAC617020D8F821037A80F7"
@@ -106,7 +106,7 @@ Potential ZPL post with multipart content, tag/pair and scoped tag/pair
             ...
     ```
 
-XML of current ZPL post following HDM
+* XML of current ZPL post following HDM
     ```
     <!-- xml, exact copy of ZPL -->
     <post ident = "DCCCECB20793342E3BAC617020D8F821037A80F7"
@@ -118,33 +118,33 @@ XML of current ZPL post following HDM
           location = "posts/blobs/60CACBF3D72E1E7834203DA608037B1BF83B40E8"
           content-size = "1024"
     />
-    ```
+```
 
-Potential XML post with multipart content, tag/pair and scoped tag/pair
-    ```
-    <!-- xml with support for multipart content -->
-    <post ident = "DCCCECB20793342E3BAC617020D8F821037A80F7"
-          subject = "contains contents of 1024 size"
-          timestamp = "2018-01-01T19:08:18Z"
-          parent-id = "">
+* Potential XML post with multipart content, tag/pair and scoped tag/pair
+```
+<!-- xml with support for multipart content -->
+<post ident = "DCCCECB20793342E3BAC617020D8F821037A80F7"
+      subject = "contains contents of 1024 size"
+      timestamp = "2018-01-01T19:08:18Z"
+      parent-id = "">
 
-        <tag value="post_level_tag" />
-        <pair key="post_level_metadata" value="some value" />
+    <tag value="post_level_tag" />
+    <pair key="post_level_metadata" value="some value" />
 
-        <!-- content without tags or pairs -->
-        <content digest = "60CACBF3D72E1E7834203DA608037B1BF83B40E8"
-                 mime-type = "*/*"  
-                 location = "posts/blobs/60CACBF3D72E1E7834203DA608037B1BF83B40E8"
-                 content-size = "1024" />
+    <!-- content without tags or pairs -->
+    <content digest = "60CACBF3D72E1E7834203DA608037B1BF83B40E8"
+             mime-type = "*/*"  
+             location = "posts/blobs/60CACBF3D72E1E7834203DA608037B1BF83B40E8"
+             content-size = "1024" />
 
-        <!-- content with scoped tag and pair -->
-        <content digest = "60CACBF3D72E1E7834203DA608037B1BF83B40E8" 
-                 mime-type = "*/*"  
-                 location = "posts/blobs/60CACBF3D72E1E7834203DA608037B1BF83B40E8"
-                 content-size = "1024">
-            <tag value="tag_for_this_content" />
-            <pair key="page" value="4" />
-            <pair key="timestamp" value="2017-01-01T19:08:18Z" />
-        </content>
-    </post>
-    ```
+    <!-- content with scoped tag and pair -->
+    <content digest = "60CACBF3D72E1E7834203DA608037B1BF83B40E8" 
+             mime-type = "*/*"  
+             location = "posts/blobs/60CACBF3D72E1E7834203DA608037B1BF83B40E8"
+             content-size = "1024">
+        <tag value="tag_for_this_content" />
+        <pair key="page" value="4" />
+        <pair key="timestamp" value="2017-01-01T19:08:18Z" />
+    </content>
+</post>
+```
